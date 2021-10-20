@@ -1,0 +1,138 @@
+@import './_mixins.scss';
+
+.link-special-animation {
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+		border: 1px solid rgb(84, 151, 95);
+		transform: scaleY(0);
+		transform-origin: bottom;
+		transition: transform 0.3s;
+	}
+	&:hover::before {
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+}
+
+.button-special-animation {
+	background: #fff;
+	width: 200px;
+	padding: 1em 1.5em;
+	border: 3px solid rgb(84, 151, 95);
+	color: rgb(84, 151, 95);
+	font-weight: bold;
+	font-size: 1.7rem;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.5rem;
+	cursor: pointer;
+	z-index: 2;
+	transition: all 0.15s 0.15s ease-out;
+	box-shadow: -16px 16px 20px -5px #000000;
+
+	&::after,
+	&::before {
+		position: absolute;
+		width: 100%;
+		max-width: 100%;
+		top: 100%;
+		left: 0;
+		bottom: -10px;
+		content: '';
+		z-index: 1;
+		transition: all 0.15s 0.15s ease-out;
+	}
+
+	&::before {
+		background: rgb(84, 151, 95);
+		top: 10px;
+		left: -15px;
+		height: 100%;
+		width: 15px;
+	}
+
+	&::after {
+		width: 100%;
+		background: rgb(84, 151, 95);
+		right: 0px;
+		left: -15px;
+		height: 15px;
+	}
+
+	&:hover {
+		background: rgb(84, 151, 95);
+		color: #fff;
+		margin-left: -7.5px;
+		margin-bottom: -7.5px;
+
+		&::after,
+		&::before {
+			top: 100%;
+			left: 0;
+			bottom: 0px;
+		}
+
+		&::before {
+			top: 0px;
+			left: 0px;
+			width: 0px;
+		}
+
+		&::after {
+			right: 0px;
+			left: 0px;
+			height: 0px;
+		}
+	}
+}
+
+.section-bg {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	min-height: 800px;
+	height: 100vh;
+	@include sectionBg('../images/top-section.jpg');
+}
+
+.section-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 5em;
+	margin-bottom: 2em;
+	background-color: rgba(2, 2, 2, 0.4);
+	color: whitesmoke;
+}
+
+.heading {
+	font-size: 5rem;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+}
+
+.onload-animation {
+	animation: fadeInAnimation ease 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+	50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
