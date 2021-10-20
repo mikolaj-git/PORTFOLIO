@@ -289,12 +289,14 @@ body {
 	}
 
 	&__card:nth-child(2) {
-		@include cardBg('../images/form.jpg');
+		@include cardBg('/images/form.jpg');
 	}
 
-	&__card:nth-child(3) {
-		@include cardBg('../images/cat3.jpg');
-	}
+	// will add soon
+
+	// &__card:nth-child(3) {
+	// 	@include cardBg('../images/cat3.jpg');
+	// }
 
 	&__card-info {
 		display: flex;
