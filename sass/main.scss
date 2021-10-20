@@ -285,11 +285,11 @@ body {
 	}
 	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	&__card:nth-child(1) {
-		@include cardBg('./images/weather.png');
+		@include cardBg('../images/weather.png');
 	}
 
 	&__card:nth-child(2) {
-		@include cardBg('./images/form.png');
+		@include cardBg('../images/form.png');
 	}
 
 	&__card:nth-child(3) {
