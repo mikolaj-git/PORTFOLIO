@@ -285,7 +285,7 @@ body {
 	}
 	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	&__card:nth-child(1) {
-		@include cardBg('../images/weather.jpg');
+		@include cardBg('/images/weather.jpg');
 	}
 
 	&__card:nth-child(2) {
