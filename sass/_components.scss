@@ -118,6 +118,12 @@
 	text-transform: uppercase;
 }
 
+@media (max-width: 360px) {
+	.heading {
+		font-size: 4rem;
+	}
+}
+
 .onload-animation {
 	animation: fadeInAnimation ease 0.8s;
     animation-iteration-count: 1;

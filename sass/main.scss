@@ -173,7 +173,7 @@ body {
 
 		&-title {
 			color: #fff;
-			font-size: 2.4rem;
+			font-size: 2rem;
 			font-weight: 700;
 			text-shadow: 0 0 0.2rem, 0 0 0.2rem;
 		}
@@ -196,6 +196,7 @@ body {
 	align-content: center;
 	align-items: center;
 
+	
 	&__box {
 		display: flex;
 		justify-content: center;
@@ -388,7 +389,7 @@ body {
 	&__phone a {
 		margin: 1em 0;
 		text-decoration: none;
-		font-size: 1.9rem;
+		font-size: 1.9rem; //@@@@@@@@@@@@@@@@@@@
 		letter-spacing: 0.2rem;
 		color: whitesmoke;
 	}
@@ -401,7 +402,7 @@ body {
 	&__icons {
 		display: flex;
 		flex-direction: row;
-		font-size: 6rem;
+		font-size: 3rem;
 		margin: 0.5em;
 
 		&-linkedin,
@@ -440,10 +441,51 @@ body {
 	color: whitesmoke;
 }
 
+@media (max-width: 360px) {
+	.nav {
+		max-height: 60px;
+
+		&__cog-btn {
+			&-icon {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	.header {
+		&__container {
+			&-title {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	.skills {
+		&__box {
+			&-img {
+				width: 90px;
+				height: 100px;
+			}
+		}
+	}
+
+	.contact {
+		&__mail a,
+		&__phone a {
+			font-size: 1.2rem;
+			letter-spacing: 0.2rem;
+		}
+	}
+
+	.footer {
+		font-size: 1rem;
+	}
+}
+
 @media (max-width: 576px) {
 	.nav {
 		a {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 
 		&__header-menu-link {
@@ -465,6 +507,8 @@ body {
 			max-width: 350px;
 		}
 	}
+
+	
 }
 
 @media (min-width: 768px) {
@@ -518,6 +562,8 @@ body {
 			min-width: 220px;
 		}
 	}
+
+	
 }
 
 @media (min-width: 992px) {
@@ -553,7 +599,9 @@ body {
 			min-width: 250px;
 		}
 
-		&__card-info-heading {
+		&__card-info-heading,
+		&__card-view-button,
+		&__card-code-button-icon  {
 			font-size: 1.5rem;
 		}
 
@@ -561,13 +609,6 @@ body {
 			font-size: 2rem;
 		}
 
-		&__card-code-button {
-			font-size: 1.5rem;
-		}
-
-		&__card-code-button-icon {
-			font-size: 1.5rem;
-		}
 	}
 
 	.contact {
